@@ -15,8 +15,8 @@
               <p class="card-text text-muted">{{ project.description }}</p>
             </div>
             <div class="card-footer">
-              <a [href]="project.projectLink" class="btn btn-primary btn-sm me-2" target="_blank">View Project</a>
-              <a [href]="project.sourceLink" class="btn btn-outline-secondary btn-sm" target="_blank">Source Code</a>
+              <a *ngIf="project.projectLink && project.projectLink !== '#'" [href]="project.projectLink" class="btn btn-primary btn-sm me-2" target="_blank">View Project</a>
+              <a *ngIf="project.sourceLink && project.sourceLink !== '#'" [href]="project.sourceLink" class="btn btn-outline-secondary btn-sm" target="_blank">Source Code</a>
             </div>
           </div>
         </div>
