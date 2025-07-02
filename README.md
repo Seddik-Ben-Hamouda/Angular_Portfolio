@@ -1,4 +1,6 @@
 # MyPortfolio
+Personal portfolio website built with Angular.
+Showcases my CV, skills, experience, education, and provides ways to contact me. Includes links to my GitHub, Behance, and LinkedIn profiles.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
