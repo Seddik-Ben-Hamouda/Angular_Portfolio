@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#skills {
+    background-color: #ffffff;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.skills-container {
+    position: relative;
+}
+
+.skills-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.skill-item {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card i {
+    font-size: 4rem;
+}
+
+.skill-card h6 {
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #343a40;
+}
+
+.skill-item h5 {
+    font-weight: 600;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+    border-radius: 5px;
+}
+
+.nav-btn {
+    font-size: 2rem;
+    color: #343a40;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+}
+
+.nav-btn:disabled {
+    color: #ced4da;
+    cursor: not-allowed;
+}
+
+.nav-btn:not(:disabled):hover {
+    color: #0d6efd;
+}

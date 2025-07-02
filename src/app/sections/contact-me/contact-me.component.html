@@ -1,0 +1,47 @@
+<section id="contact" class="contact-split-section py-5">
+  <div class="container contact-split-container">
+    <div class="contact-split-box row-swapper" [ngClass]="{'reverse': !formOnRight}">
+      <!-- Grey box (left or right) -->
+      <div class="contact-empty-side d-flex align-items-center justify-content-center pointer-cursor">
+        <div class="text-center w-100">
+          <span class="fs-4 text-secondary"></span>
+          
+        </div>
+      </div>
+      <!-- Form (left or right) -->
+      <div class="contact-form-side compact-form">
+        <h2 class="mb-4">Contact Us</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name *</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="contactForm.name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contactForm.email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject *</label>
+            <input type="text" class="form-control" id="subject" name="subject" [(ngModel)]="contactForm.subject" required placeholder="Portfolio Inquiry">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="form-label">Message *</label>
+            <textarea class="form-control" id="message" name="message" rows="4" [(ngModel)]="contactForm.message" required placeholder="Tell me about your project or opportunity..."></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn submit-btn w-100" [disabled]="isSubmitting">
+              <span *ngIf="!isSubmitting">Submit</span>
+              <span *ngIf="isSubmitting">
+                <i class="fas fa-spinner fa-spin me-2"></i>Sending...
+              </span>
+            </button>
+          </div>
+        </form>
+        <div *ngIf="isSubmitted" class="alert alert-success mt-3 text-center">
+          <i class="fas fa-check-circle me-2"></i>
+          Thank you! Your message has been sent successfully.
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

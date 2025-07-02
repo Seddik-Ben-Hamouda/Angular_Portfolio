@@ -1,0 +1,19 @@
+<section id="education" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Education</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let edu of education; let isOdd = odd">
+        <div class="timeline-content" [class.left]="isOdd" [class.right]="!isOdd">
+          <div class="timeline-arrow"></div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{ edu.degree }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ edu.institution }} | {{ edu.period }}</h6>
+              <p class="card-text">{{ edu.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Skills</h2>
+    <div class="skills-container d-flex align-items-center justify-content-center">
+      <button class="btn nav-btn" (click)="previous()" [disabled]="currentIndex === 0">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="skills-carousel">
+        <div class="skill-item" *ngFor="let skill of visibleSkills">
+          <div class="skill-card">
+            <i [class]="skill.iconClass"></i>
+            <h6 class="mt-3">{{ skill.name }}</h6>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn nav-btn" (click)="next()" [disabled]="currentIndex + skillsToShow >= skills.length">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>

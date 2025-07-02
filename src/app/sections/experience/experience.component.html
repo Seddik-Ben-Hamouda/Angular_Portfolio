@@ -1,0 +1,19 @@
+<section id="experience" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">My Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let exp of experience; let isOdd = odd">
+        <div class="timeline-content" [class.left]="isOdd" [class.right]="!isOdd">
+          <div class="timeline-arrow"></div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{ exp.role }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ exp.company }} | {{ exp.period }}</h6>
+              <p class="card-text">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

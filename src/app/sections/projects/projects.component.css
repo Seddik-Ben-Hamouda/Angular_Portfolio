@@ -1,0 +1,63 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#projects {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.projects-container {
+    position: relative;
+}
+
+.projects-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.project-item {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-footer {
+    background-color: #ffffff;
+    border-top: none;
+}
+
+.nav-btn {
+    font-size: 2rem;
+    color: #343a40;
+    background-color: transparent;
+    border: none;
+    padding: 0 1rem;
+}
+
+.nav-btn:disabled {
+    color: #ced4da;
+    cursor: not-allowed;
+}
+
+.nav-btn:not(:disabled):hover {
+    color: #0d6efd;
+}
